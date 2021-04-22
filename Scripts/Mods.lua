@@ -114,11 +114,11 @@
 -- These will be the option rows available on the [nth] option screen. The 'NextScreen' row will be automatically added as long as there is more than 1 option screen.
 	playerOptions = {}
 	playerOptions[1] = { 'SpeedType','SpeedNumber','Mini','Perspective','NoteSkin','Turn','LifeBar','Compare','Rate' }
-	--if FUCK_EXE and GAMESTATE:GetVersionDate() >= 20210420 then -- v4.2.0
-	playerOptions[2] = { 'MetaMods1','MetaMods2','MetaMods3','Turn','Accel','Scroll','Effect','Appearance','Handicap','InsertTaps','InsertOther','Hide','Ghost' }
-	--[[else
+	if FUCK_EXE and GAMESTATE:GetVersionDate() >= 20210420 then -- v4.2.0
+		playerOptions[2] = { 'MetaMods1','MetaMods2','MetaMods3','Turn','Accel','Scroll','Effect','Appearance','Handicap','InsertTaps','InsertOther','Hide','Ghost' }
+	else
 		playerOptions[2] = { 'Turn','Accel','Scroll','Effect','Appearance','Handicap','InsertTaps','InsertOther','Hide','Ghost' }
-	end--]]
+	end
 	playerOptions.Edit = { 'SpeedType','SpeedNumber','Mini','Perspective','NoteSkin','Turn' }
 	ShowAllInRow = false
 
